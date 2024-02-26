@@ -20,7 +20,7 @@ function App() {
       if (player1 === "" || player2 === "") {
         setResult("Ambos jugadores han de escoger")
       } else {
-        const backendUrl = "http://localhost:5265";
+        const backendUrl = "https://piedrapapeltijerabklp20240226233014.azurewebsites.net";
         const queryParameters = new URLSearchParams({ player1, player2 }).toString();
         const response = await axios.post(`${backendUrl}/api/Game?${queryParameters}`);
         setResult(response.data);
